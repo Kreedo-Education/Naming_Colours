@@ -29,14 +29,14 @@
     <script>
         
         var messageData; // Global variable To store the data arived from app
-        /* function handleEvent(message) { // the data listener
+         function handleEvent(message) { // the data listener
             //  alert(message.data);   // data can be used now in game
               messageData = message.data;
          }
         function SendDataToUnity(data) {
            // Don't change this line.
            gameInstance.SendMessage("GetData","ReceiveData",data);
-        }*/
+        }
         
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/V6.loader.js";
@@ -86,9 +86,9 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
             //CDA: Assigning gameInstance variable
-                   //  gameInstance = unityInstance;
+                     gameInstance = unityInstance;
                      //CDA: Calling the function to send data to Unity
-                    // SendDataToUnity(messageData);
+                     SendDataToUnity(messageData);
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
