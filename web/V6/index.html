@@ -35,13 +35,13 @@
          }
         function SendDataToUnity(data) {
            // Don't change this line.
+           alert(data);
            gameInstance.SendMessage("GetData","ReceiveData",data);
         }
         
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/V6.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/V6.data",
+      var config = {			dataUrl: buildUrl + "/V6.data",
         frameworkUrl: buildUrl + "/V6.framework.js",
         codeUrl: buildUrl + "/V6.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -88,6 +88,7 @@
             //CDA: Assigning gameInstance variable
                      gameInstance = unityInstance;
                      //CDA: Calling the function to send data to Unity
+                     
                      SendDataToUnity(messageData);
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
