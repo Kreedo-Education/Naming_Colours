@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+		<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -27,11 +27,11 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/V6.loader.js";
+      var loaderUrl = buildUrl + "/V8.loader.js";
       var config = {
-        dataUrl: buildUrl + "/V6.data",
-        frameworkUrl: buildUrl + "/V6.framework.js",
-        codeUrl: buildUrl + "/V6.wasm",
+        dataUrl: buildUrl + "/V8.data",
+        frameworkUrl: buildUrl + "/V8.framework.js",
+        codeUrl: buildUrl + "/V8.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Naming Color",
@@ -117,7 +117,7 @@
 
       //CDA: Sending data to Unity
       function SendDataToUnity(data) {
-        // Don't change this line.
+        // Don't change this line.		
         gameInstance.SendMessage("GetData","ReceiveData",data);
         }
 
